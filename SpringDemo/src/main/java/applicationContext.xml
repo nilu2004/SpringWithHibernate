@@ -9,12 +9,10 @@
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd">
 <context:annotation-config/>
 <bean id="employee" class="com.example.Employee" scope="prototype">
-	<property name="empId" value="1"/>
-	<property name="empName" value="Trilochan"/>
 </bean>
 
 <bean id= "address" class="com.example.Address" p:city="Pune" scope="singleton"/>	
-<!-- <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
 <property name="url" value="jdbc:mysql://localhost:3306/hibernateDB"/>
 <property name="username" value="root"/>
@@ -30,6 +28,7 @@
 <prop key="hibernate.hbm2ddl.auto">create</prop>
 <prop key="hibernate.cache.provider_class">org.hibernate.cache.NoCacheProvider</prop>
 <prop key="hibernate.connection.autocommit">false</prop>
+<prop key="hibernate.show_sql">true</prop>
 </props>
 </property>
 <property name="annotatedClasses">
@@ -37,5 +36,5 @@
 		<value>com.example.Employee</value>
 	</list>
 </property>
-</bean> -->
+</bean>
 </beans>
